@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  miroservice_leads:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

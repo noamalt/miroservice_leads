@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  miroservice_leads:
+    image: miroserviceleads
+    build:
+      context: .
+      dockerfile: miroservice_leads/Dockerfile
