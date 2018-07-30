@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using miroservice_leads.Models;
 
 namespace miroservice_leads.Controllers
 {
@@ -12,16 +13,27 @@ namespace miroservice_leads.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Leads>> Get()
         {
-            return new string[] { "value1", "value2" };
+
+            using (var context = new CRM3Context())
+            {
+                var leads = context.Leads.Where(l => l.OfficeId == 6 ).OrderByDescending(l => l.DateEntered).Take(100).ToList();
+                return leads;
+            }
+            
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Leads> Get(int id)
         {
-            return "value:" + id ;
+            using (var context = new CRM3Context())
+            {
+                var lead = context.Leads.Where(l => l.LeadId == id).Single();
+                return lead;
+            }
+            
         }
 
         // POST api/values
