@@ -31,19 +31,7 @@ namespace miroservice_leads.Controllers
 
         }
 
-        // GET api/values
-
-        //[HttpGet]
-        //public ActionResult<IEnumerable<Leads>> Get()
-        //{
-
-        //    using (var context = new CRM3Context())
-        //    {
-        //        var leads = context.Leads.Where(l => l.OfficeId == 6).OrderByDescending(l => l.DateEntered).Take(100).ToList();
-        //        return leads;
-        //    }
-
-        //}
+ 
 
         // GET api/values/5
 
