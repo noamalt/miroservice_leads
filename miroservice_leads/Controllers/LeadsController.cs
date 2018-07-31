@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using miroservice_leads.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Query;
-
+using Microsoft.AspNetCore.Mvc;
 
 namespace miroservice_leads.Controllers
 {
@@ -17,9 +10,6 @@ namespace miroservice_leads.Controllers
     [ApiController]
     public class LeadsController : ControllerBase
     {
-
-
-
         [EnableQuery(AllowedQueryOptions = AllowedQueryOptions.All)]
         public IActionResult Get()
         {
@@ -28,10 +18,8 @@ namespace miroservice_leads.Controllers
                 var dbcontext = new CRM3Context();
                 return Ok(dbcontext.Leads.AsQueryable());
             }
-
         }
 
- 
 
         // GET api/values/5
 
@@ -43,7 +31,6 @@ namespace miroservice_leads.Controllers
                 var lead = context.Leads.Where(l => l.LeadId == id).Single();
                 return lead;
             }
-            
         }
 
         // POST api/values
@@ -54,7 +41,7 @@ namespace miroservice_leads.Controllers
         }
 
         // PUT api/values/5
-        
+
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
@@ -65,8 +52,5 @@ namespace miroservice_leads.Controllers
         public void Delete(int id)
         {
         }
-
-
-       
     }
 }

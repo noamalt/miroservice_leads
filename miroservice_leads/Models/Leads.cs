@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace miroservice_leads.Models
 {
-    public partial class Leads
-    {   [Key]
+    public class Leads
+    {
+        [Key]
         public int LeadId { get; set; }
+
         public int? OriginLeadId { get; set; }
         public string Serial { get; set; }
         public int? PlacementId { get; set; }
