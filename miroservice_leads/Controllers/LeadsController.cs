@@ -10,7 +10,7 @@ namespace miroservice_leads.Controllers
     [ApiController]
     public class LeadsController : ControllerBase
     {
-        [EnableQuery(PageSize =100, AllowedQueryOptions = AllowedQueryOptions.Apply)]
+        [EnableQuery(PageSize =100, AllowedQueryOptions = AllowedQueryOptions.All)]
         public IActionResult Get()
         {
             using (var context = new CRM3Context())
