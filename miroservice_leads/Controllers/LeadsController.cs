@@ -77,13 +77,13 @@ namespace miroservice_leads.Controllers
                 var dbcontext = new CRM3Context();
                 try
                 {
-                   
-                    
+                                       
 
                     var lead= dbcontext.Leads.Where(l => l.LeadId == id).Single();
                     lead.Email = item.Email;
                     lead.FirstName = item.FirstName;
                     lead.LastName = item.LastName;
+
                    
                     dbcontext.Leads.Update(lead);
                     dbcontext.SaveChanges();
