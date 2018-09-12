@@ -86,6 +86,7 @@ namespace miroservice_leads.Controllers
                     lead.Address = item.Address;
                     lead.Ip = item.Ip;
                     lead.Phone = lead.Phone;
+                    lead.ZipCode = lead.ZipCode;
 
                    
                     dbcontext.Leads.Update(lead);
