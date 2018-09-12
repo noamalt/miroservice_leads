@@ -83,6 +83,9 @@ namespace miroservice_leads.Controllers
                     lead.Email = item.Email;
                     lead.FirstName = item.FirstName;
                     lead.LastName = item.LastName;
+                    lead.Address = item.Address;
+                    lead.Ip = item.Ip;
+                    lead.Phone = lead.Phone;
 
                    
                     dbcontext.Leads.Update(lead);
