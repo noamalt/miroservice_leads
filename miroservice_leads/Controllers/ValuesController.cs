@@ -42,6 +42,7 @@ namespace miroservice_leads.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+            id = 6;
         }
 
         // DELETE api/values/5
