@@ -1,4 +1,5 @@
 ﻿using miroservice_leads.Models;
+using miroservice_leads.Models.Mysql;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -24,7 +25,8 @@ namespace miroservice_leads
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CRM3Context>();
+            //services.AddDbContext<CRM3Context>();
+            services.AddDbContext<mt4_reportContext>();
             services.AddOData();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -34,7 +36,8 @@ namespace miroservice_leads
         {
             var builder = new ODataConventionModelBuilder();
             builder.EntitySet<Leads>("Leads");
-
+            //builder.EntitySet<Mt4Daily>("Mt4Daily");
+           
             return builder.GetEdmModel();
         }
 

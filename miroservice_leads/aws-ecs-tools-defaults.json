@@ -1,0 +1,8 @@
+
+{
+    "region" : "eu-west-1",
+    "profile" : "NoamAWS_linux",
+    "configuration" : "Release",
+    "tag"           : "miroserviceleads:latest",
+    "vstoolkit-deployment-mode" : "PushOnly"
+}

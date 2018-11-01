@@ -1,0 +1,107 @@
+﻿@model miroservice_leads.Models.Mysql.Mt4Daily
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>Mt4Daily</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Group" class="control-label"></label>
+                <input asp-for="Group" class="form-control" />
+                <span asp-validation-for="Group" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bank" class="control-label"></label>
+                <input asp-for="Bank" class="form-control" />
+                <span asp-validation-for="Bank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BalancePrev" class="control-label"></label>
+                <input asp-for="BalancePrev" class="form-control" />
+                <span asp-validation-for="BalancePrev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Balance" class="control-label"></label>
+                <input asp-for="Balance" class="form-control" />
+                <span asp-validation-for="Balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deposit" class="control-label"></label>
+                <input asp-for="Deposit" class="form-control" />
+                <span asp-validation-for="Deposit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Credit" class="control-label"></label>
+                <input asp-for="Credit" class="form-control" />
+                <span asp-validation-for="Credit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfitClosed" class="control-label"></label>
+                <input asp-for="ProfitClosed" class="form-control" />
+                <span asp-validation-for="ProfitClosed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profit" class="control-label"></label>
+                <input asp-for="Profit" class="form-control" />
+                <span asp-validation-for="Profit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equity" class="control-label"></label>
+                <input asp-for="Equity" class="form-control" />
+                <span asp-validation-for="Equity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Margin" class="control-label"></label>
+                <input asp-for="Margin" class="form-control" />
+                <span asp-validation-for="Margin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarginFree" class="control-label"></label>
+                <input asp-for="MarginFree" class="form-control" />
+                <span asp-validation-for="MarginFree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifyTime" class="control-label"></label>
+                <input asp-for="ModifyTime" class="form-control" />
+                <span asp-validation-for="ModifyTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

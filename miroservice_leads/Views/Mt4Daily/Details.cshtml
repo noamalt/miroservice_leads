@@ -1,0 +1,99 @@
+﻿@model miroservice_leads.Models.Mysql.Mt4Daily
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Mt4Daily</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Group)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Group)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bank)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BalancePrev)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BalancePrev)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Deposit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Deposit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfitClosed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProfitClosed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Equity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Equity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Margin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Margin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarginFree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarginFree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifyTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
